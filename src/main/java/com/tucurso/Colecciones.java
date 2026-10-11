@@ -1,5 +1,6 @@
 package com.tucurso;
 
+import com.tucurso.utilidades.Texto;
 import java.util.ArrayList;
 
 public class Colecciones {
@@ -91,7 +92,9 @@ public class Colecciones {
 			System.out.println(numeros2[i]);
 		}
 		*/
-
-	}
+		Texto.inicioSeccion("Prueba import propio");
+		System.out.println("\nDodo Magico");
+		Texto.finSeccion();
+	}	
 
 }
