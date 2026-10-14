@@ -4,7 +4,7 @@ import com.tucurso.utilidades.Texto;
 import java.util.ArrayList;
 
 public class Colecciones {
-	public static int sumaTotal_array (int[] n) {
+	public static int sumaTotalArray (int[] n) {
 		int suma = 0;
 
 		for (int x : n) {
@@ -14,7 +14,7 @@ public class Colecciones {
 		return (suma);
 	}
 
-	public static int sumaTotal_arrayl (ArrayList<Integer> n) {
+	public static int sumaTotalArrayl (ArrayList<Integer> n) {
 		int suma = 0;
 
 		for (Integer x : n) {
@@ -31,11 +31,14 @@ public class Colecciones {
 	public static String imprimirIntArray (int[] array){
 		String resultado="(";
 
-		for (int i : array) {
-			resultado=resultado+i+",";
+		if (array.length > 0) {
+			for (int i : array) {
+				resultado=resultado+i+",";
+			}
+			return(resultado.substring(0, resultado.length()-1) + ")");
+		} else {
+			return("()");
 		}
-
-		return(resultado.substring(0, resultado.length()-1) + ")");
 	}
 
 	public static void main (String[] args) {
@@ -44,24 +47,24 @@ public class Colecciones {
 		System.out.println("Metodo Suma Total V1");
 		separador();
 
-		int[] numeros_array = {0,1,2,3,4,5,6,7,8,9,10};
+		int[] numerosArray = {0,1,2,3,4,5,6,7,8,9,10};
 		
 
-		System.out.println("Array: " + imprimirIntArray(numeros_array));
-		System.out.println("Suma Total Array: " + sumaTotal_array(numeros_array)+"\n");
+		System.out.println("Array: " + imprimirIntArray(numerosArray));
+		System.out.println("Suma Total Array: " + sumaTotalArray(numerosArray)+"\n");
 
 		separador();
 		System.out.println("Metodo Suma Total V2");
 		separador();
 
-		ArrayList<Integer> numeros_arrayl = new ArrayList<>();
+		ArrayList<Integer> numerosArrayl = new ArrayList<>();
 
 		for (int i = 0; i<=10; i++) {
-			numeros_arrayl.add(i);
+			numerosArrayl.add(i);
 		}
 
-		System.out.println("Array List" + numeros_arrayl);
-		System.out.println("Suma Total Array List: " +sumaTotal_arrayl(numeros_arrayl)+"\n");
+		System.out.println("Array List" + numerosArrayl);
+		System.out.println("Suma Total Array List: " +sumaTotalArrayl(numerosArrayl)+"\n");
 
 
 		separador();
@@ -94,6 +97,14 @@ public class Colecciones {
 		*/
 		Texto.inicioSeccion("Prueba import propio");
 		System.out.println("\nDodo Magico");
+		Texto.finSeccion();
+
+		Texto.inicioSeccion("Imprimir Array Fallido");
+
+		int[] arrayVacio={};
+
+		System.out.println(imprimirIntArray(arrayVacio));
+
 		Texto.finSeccion();
 	}	
 

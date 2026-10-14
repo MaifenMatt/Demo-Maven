@@ -41,9 +41,9 @@ public class Metodos{
 
 		double c=12.34;
 
-		System.out.println("Numero raiz: " + c);
+		System.out.println("Numero base: " + c);
 
-		System.out.println("Potencia cuadrtica: " + cuadrado(c));
+		System.out.println("Potencia cuadratica: " + cuadrado(c));
 
 		System.out.println(" ");
 

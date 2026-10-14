@@ -15,6 +15,12 @@ public class Texto {
 		System.out.println("\n");
 	}
 
+	public static void superSeccion(String titulo){
+		System.out.println("---------------------------------------------------------------------------");
+		System.out.println(titulo);
+		System.out.println("---------------------------------------------------------------------------");
+	}
+
 	public static void main (String[] args) {
 
 	}
